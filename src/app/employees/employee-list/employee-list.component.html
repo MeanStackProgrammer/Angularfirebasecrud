@@ -1,0 +1,14 @@
+<h6 class="text-center"></h6>
+<table class="table table-sm table-hover">
+  <tr *ngFor = "let employee of employeeList">
+    <td>{{employee.name}}</td>
+    <td>{{employee.position}}</td>
+    <td>{{employee.office}}</td>
+    <td>{{employee.salary}}</td>
+    <td>
+        <button (click)="onEdit(employee)" class="btn btn-outline-danger btn-sm">Edit</button>
+        <button (click)="delete(employee.$key)" class="btn btn-outline-danger btn-sm">Delete</button>
+   </td>
+  </tr>
+
+</table>
